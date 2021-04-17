@@ -1,0 +1,41 @@
+server:
+  port: 8006
+spring:
+  application:
+    name: consul-provider-payment
+    ###consul注册中心
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #hostname:127.0.0.1
+        service-name: ${spring.application.name}
+
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource   #当前数据源操作类型
+#    driver-class-name: com.mysql.cj.jdbc.Driver   #mysql驱动包
+#    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT&useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: 123456
+#eureka:   #eureka  将自己注册进eureka中
+#  client:
+#    #表示是否将自己注册进eurekaServer默认为true
+#    register-with-eureka: true
+#    #是否从EurekaServer抓取已有的注册信息，默认为true。集群必须设置为true才能配合true才能配合ribbon使用负载均衡
+#    fetchRegistry: true
+#    service-url:
+#      #defaultZone: http://localhost:7001/eureka
+#      #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #eureka集群
+#      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka  #eureka集群
+#  instance:
+#    instance-id: payment8002
+#      #访问路径可以显示ip地址
+#    prefer-ip-address: true
+#     #客户端向服务端发送心跳时间间隔，单位为秒（默认30s）
+#    lease-renewal-interval-in-seconds: 30
+#     #服务端收到最后一次心跳等待时间上限，超时将剔除服务
+#    lease-expiration-duration-in-seconds: 90
+#mybatis:
+#  mapperLocations: classpath:mapper/*.xml
+#  type-aliases-package: com.atguigu.springcloud.entities

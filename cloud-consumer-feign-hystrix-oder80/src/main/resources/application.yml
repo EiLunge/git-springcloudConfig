@@ -1,0 +1,36 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-order-service
+eureka:   #eureka  将自己注册进eureka中
+  client:
+    #表示是否将自己注册进eurekaServer默认为true
+    register-with-eureka: true
+    #是否从EurekaServer抓取已有的注册信息，默认为true。集群必须设置为true才能配合true才能配合ribbon使用负载均衡
+    #fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+      #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #eureka集群
+      #defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka  #eureka集群
+feign:
+  hystrix:
+    enabled: true
+#ribbon:
+#  #指的是建立连接所用的时间，适用网络正常的情况下，两端连接所用的时间
+#  ReadTimeout: 5000
+#  #指的是建立连接后从服务器器读取到可用资源所用的时间
+#  ConnectTimeout: 5000
+
+#  instance:
+#    instance-id: order80
+#    #访问路径可以显示ip地址
+#    prefer-ip-address: true
+#    #客户端向服务端发送心跳时间间隔，单位为秒（默认30s）
+#    lease-renewal-interval-in-seconds: 30
+#    #服务端收到最后一次心跳等待时间上限，超时将剔除服务(默认90s)
+#logging:
+#  level:
+#    #feign日志以什么级别监视哪个接口
+#    com.atguigu.springcloud.service.PaymentFeignService: debug
+#    lease-expiration-duration-in-seconds: 90
