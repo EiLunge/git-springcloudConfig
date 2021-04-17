@@ -10,9 +10,14 @@ spring:
       profile: dev  #取后缀名字
       uri: http://localhost:3344
       name: config
-
-
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+#暴露监控短点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

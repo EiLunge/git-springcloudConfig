@@ -11,7 +11,7 @@ spring:
           uri: https://github.com/EiLunge/git-springcloudConfig #github上面的git仓库名字
           search-paths:
             - git-springcloudConfig
-          strict-host-key-checking: false
+          strict-host-key-checking: false #解决https问题
       label: master
 
 eureka:
