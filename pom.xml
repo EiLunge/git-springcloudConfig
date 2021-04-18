@@ -28,6 +28,9 @@
         <module>cloud-config-center3344</module>
         <module>cloud-config-center3355</module>
         <module>cloud-config-center3366</module>
+        <module>cloud-stream-rabbitmq-provider8801</module>
+        <module>cloud-stream-rabbitmq-consumer8802</module>
+        <module>cloud-stream-rabbitmq-cunsumer8803</module>
     </modules>
     <!-- packaging pom 总工程-->
     <!--统一管理jar包版本-->
