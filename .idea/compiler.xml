@@ -10,6 +10,7 @@
         <module name="cloud-providerconsul-payment8006" />
         <module name="cloud-config-center3344" />
         <module name="cloud-config-center3355" />
+        <module name="cloud-config-center3366" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-consumer-feign-hystrix-oder80" />
         <module name="cloud-provider-payment8004" />
